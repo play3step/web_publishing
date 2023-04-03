@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text_styling</title>
+    <style>
+        body {
+            color: #4d5256;
+            font-family: "Spoqa Han Sans","Spoqa Han Sans JP","Source Sans Pro",Apple SD Gothic Neo,"맑은 고딕","Malgun Gothic","돋움",Dotum,Verdana,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            
+        }
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+            align-items: center;
+            display: block;
+        }
+        .button{
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 50px;
+            font-size: 16px;
+        }
+        hr{
+            color: rgba(112, 109, 109, 0.103);
+        }
+        .box1{
+            display: inline-block;
+            margin-right: 40px;
+            text-align: center;
+        }
+        .box2{
+            display: flex;
+            flex-direction: column;
+            display: inline-block;
+            margin-bottom: 50px;
+
+        }
+        .box3{
+            height: 170px;
+            width: 200px;
+            border: 1px solid rgba(112, 109, 109, 0.103);
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+        .sample{
+            font-size: 56px;
+            line-height: 1.5;
+        }
+        .text1{
+            display: inline-block;
+            margin-left: 70px;
+        }
+        .title{
+            margin-top: 100px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .exp{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .box_title{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px; 
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div>
+            <div class="button" style="color: rgb(34, 121, 209); font-size: 30px;">spoqa</div>
+            <div class="button">로고타입</div>
+            <div class="button">색상</div>
+            <div class="button">타이포그래피</div>
+            <div class="button">UI요소</div>
+            <div class="button"> 그래픽 리소스</div>
+        </div>
+        <h1 style="margin-top: 130px; font-size: 48px; font-weight: 200l;">타이포그래피</h1>
+
+        <h4 class="title">Font</h4>
+        <hr>
+        <p class="exp">
+            스포카에서 제작한 모든 서비스와 문서에는 Spoqa Han Sans를 사용합니다. Spoqa Hans Sans는 스포카에서 디자인한 폰트로<br>
+            Noto Sans와 Lato를 모체로 합니다. Spoqa Han Sans 는 영문, 국문, 숫자와 글리프를 포함한 Spoqa Han Sans와 일문, 간지<br>
+            (かんじ)를 포함한 Spoqa Han Sans JP 두가지 버전으로 이루어져 있습니다. 자족은 Thin, Regular, Bold로 구성되어 있습니다.<br>
+        </p>
+        <div class="box1">
+            <div>Spoqa Han Sans Thin</div>
+            <div class="sample" style="font-weight: 100;">가あA</div>
+        </div>
+        <div class="box1">
+            <div>Spoqa Han Sans Light</div>
+            <div class="sample" style="font-weight: 300;">가あA</div>
+        </div>
+        <div class="box1">
+            <div>Spoqa Han Sans Regular</div>
+            <div class="sample" style="font-weight: 400;">가あA</div>
+        </div>
+        <div class="box1">
+            <div>Spoqa Han Sans Bold</div>
+            <div class="sample" style="font-weight: 700;">가あA</div>
+        </div>
+        <br>
+        <h4 class="title">Usage</h4>
+        <hr>
+        <p class="exp">텍스트의 위계에 따라 폰트의 크기 및 자족을 아래와 같이 사용합니다.</p>
+        <div>
+            <div class="box2">
+                Heading 1<br>
+                45px, bold
+            </div>
+            <div class="text1" 
+            style="font-size: 45px;
+            font-weight: 700;
+            line-height: 1.3;">
+                Nulla metus metus
+            </div>
+        </div>
+        <div>
+            <div class="box2">
+                <div>Heading 2</div>
+                <div>36px, bold</div>
+            </div>
+            <div class="text1" style="font-size: 36px;
+            margin-top: -0.3em;
+            font-weight: 700;
+            line-height: 1.3;">
+                Quisque volutpat condimentum
+            </div>
+        </div>
+        <div>
+            <div class="box2">
+                <div>Heading 3</div>
+                <div>26px, bold</div>
+            </div>
+            <div class="text1" style="font-size: 26px;
+            margin-top: -0.3em;
+            font-weight: 700;
+            line-height: 1.3;">
+                NEtiam ultrices. Suspendisse in justo
+            </div>
+        </div>
+        <div>
+            <div class="box2">
+                <div>Heading 4</div>
+                <div>18px, bold</div>
+            </div>
+            <div class="text1" style="font-size: 18px;
+            margin-top: -0.3em;
+            font-weight: 700;
+            line-height: 1.3;">
+                In vel mi sit amet augue congue elementum
+            </div>
+        </div>
+        <div>
+            <div class="box2">
+                <div>Paragraph</div>
+                <div>14px, normal</div>
+            </div>
+            <div class="text1" style="font-size: 14px;">
+                Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus<br>
+                vitae pharetra auctor, sem massa mattis sem, at interdum magna augue<br>
+                eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices<br>
+                posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.<br>
+                Sed non quam.
+            </div>
+        </div>
+        <div>
+            <div class="box2">
+                <div>Small Text</div>
+                <div>12px, normal</div>
+            </div>
+            <div class="text1" style="font-size: 12px;">Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam.<br>
+                Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue.
+            </div>
+        </div>
+        <h4 class="title">Text Color</h4>
+        <hr>
+        <p class="exp" style="margin-bottom: 100px;">
+            상황과 맥락에 따라 텍스트의 색상을 아래와 같이 사용합니다.
+        </p>
+        <h5 class="title">Basic Text Colors</h5>
+        <div>
+            <div class="exp">
+                일반적인 텍스트에는 Greyscale 7번을 사용합니다. 그보다 한 단계 밝은 텍스트에는 Greyscale 6번을 사용하며,<br>
+                어두운 배경 위의 텍스트에는 Greyscale 0번을 사용합니다.
+            </div>
+            <div class="box3">
+                <div class="box_title">Greyscale 7</div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>$grey-7</td>
+                        </tr>
+                        <tr>
+                            <td>Hex</td>
+                            <td>#4d5256</td>
+                        </tr>
+                        <tr>
+                            <td>Pantone</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>CMYK</td>
+                            <td>00 00 00 70</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="box_title">Greyscale 6</div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>$$grey-6</td>
+                        </tr>
+                        <tr>
+                            <td>Hex</td>
+                            <td>##878d91</td>
+                        </tr>
+                        <tr>
+                            <td>Pantone</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>CMYK</td>
+                            <td>00 00 00 76</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="box_title"style=" background-color: gray; color: white;">
+                    Greyscale 0
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>$$grey-0</td>
+                        </tr>
+                        <tr>
+                            <td>Hex</td>
+                            <td>##f8fafb</td>
+                        </tr>
+                        <tr>
+                            <td>Pantone</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>CMYK</td>
+                            <td>00 00 00 05</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h4 class="title">Primary Text Colors</h4>
+        <hr>
+        <div class="exp">
+            주요 텍스트 색상으로는 Main Blue 0번을 사용합니다.
+        </div>
+        <div class="box3">
+            <div class="box_title" style="color: blue;">
+                Main Blue 0
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>$mainblue-0</td>
+                    </tr>
+                    <tr>
+                        <td>Hex</td>
+                        <td>#4c80f1</td>
+                    </tr>
+                    <tr>
+                        <td>Pantone</td>
+                        <td>285C</td>
+                    </tr>
+                    <tr>
+                        <td>CMYK</td>
+                        <td>90 45 00 00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h4 class="title">Functional Text Colors</h4>
+        <hr>
+        <div class="exp">
+            긍정, 상승의 텍스트에는 Green dark 1 번을, 부정, 하강의 텍스트에는 Red dark 1번을 사용합니다.
+        </div>
+        <div class="box3">
+            <div class="box_title" style="color: green;">
+                Green Dark 1
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>$mainblue-0</td>
+                    </tr>
+                    <tr>
+                        <td>Hex</td>
+                        <td>#4c80f1</td>
+                    </tr>
+                    <tr>
+                        <td>Pantone</td>
+                        <td>285C</td>
+                    </tr>
+                    <tr>
+                        <td>CMYK</td>
+                        <td>90 45 00 00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="box_title" style="color: red;">
+                Red Dark 1
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>$mainblue-0</td>
+                    </tr>
+                    <tr>
+                        <td>Hex</td>
+                        <td>#4c80f1</td>
+                    </tr>
+                    <tr>
+                        <td>Pantone</td>
+                        <td>285C</td>
+                    </tr>
+                    <tr>
+                        <td>CMYK</td>
+                        <td>90 45 00 00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</body>
+</html>
