@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019156014</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        text-align: center;
+        height: 2000px;
+    }
+
+    .menu-box {
+        width: 1064px;
+        height: 100px;
+        display: inline-block;
+        margin-top: 50px;
+        border: 1px solid;
+    }
+
+    .menu {
+        width: 196px;
+        height: 70px;
+        font-size: 24px;
+        justify-content: center;
+        text-align: center;
+        margin-right: 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu:hover {
+        color: green;
+    }
+
+    .music-box {
+        width: 740px;
+        height: 370px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-top: 30px;
+        vertical-align: top;
+        padding: 20px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    .grid-item {
+        width: 160px;
+        height: 160px;
+        background-color: #ccc;
+        padding: 20px;
+    }
+
+    .box-line {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    .login-box {
+        width: 304px;
+        height: 140px;
+        border: 1px solid black;
+        margin-top: 30px;
+
+    }
+
+    .login {
+        position: absolute;
+        text-align: center;
+        margin-top: 35px;
+        margin-left: 22px;
+        width: 260px;
+        height: 70px;
+        background-color: green;
+        font-size: 20px;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .login:hover {
+        box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.50);
+    }
+
+    .box {
+        width: 304px;
+        height: 204px;
+        border: 1px solid black;
+        margin-top: 25px;
+    }
+
+    .news {
+        border: 1px solid black;
+        width: 1064px;
+        height: 740px;
+        margin-top: 25px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="menu-box">
+        <div>
+            <a href="#" class="menu">음악차트</a>
+            <a href="#" class="menu">최신음악</a>
+            <a href="#" class="menu">장르음악</a>
+            <a href="#" class="menu">PlayList</a>
+        </div>
+    </div>
+    <div class="music-box">
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+        </div>
+    </div>
+    <div class="box-line">
+        <div class="login-box">
+            <div class="login">
+                <p>로그인</p>
+            </div>
+        </div>
+        <div class="box">
+
+        </div>
+    </div>
+    <div class="news">
+
+    </div>
+</body>
+
+</html>
