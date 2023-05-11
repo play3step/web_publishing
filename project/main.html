@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2019156014</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <style>
     * {
         margin: 0px;
@@ -15,8 +19,20 @@
     }
 
     body {
+        margin: auto;
         text-align: center;
+        width: 1440px;
         height: 2000px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    #title {
+        font-size: 56px;
+        margin-top: 70px;
+        color: #63D054;
+        font-family: 'Noto Serif', serif;
+        font-weight: 700;
     }
 
     .menu-box {
@@ -24,6 +40,7 @@
         height: 100px;
         display: inline-block;
         margin-top: 50px;
+        padding-top: 35px;
         border: 1px solid;
     }
 
@@ -33,13 +50,13 @@
         font-size: 24px;
         justify-content: center;
         text-align: center;
-        margin-right: 20px;
+        margin-right: 60px;
         text-decoration: none;
         color: black;
     }
 
     .menu:hover {
-        color: green;
+        color: #63D054;
     }
 
     .music-box {
@@ -75,25 +92,26 @@
         height: 140px;
         border: 1px solid black;
         margin-top: 30px;
-
+        text-align: justify;
     }
 
     .login {
         position: absolute;
         text-align: center;
-        margin-top: 35px;
-        margin-left: 22px;
-        width: 260px;
-        height: 70px;
-        background-color: green;
-        font-size: 20px;
+        margin-top: 45px;
+        margin-left: 52px;
+        width: 200px;
+        height: 50px;
+        background-color: #63D054;
+        font-size: 16px;
         color: white;
-        padding: 15px;
-        border-radius: 5px;
+        padding-top: 18px;
+        text-decoration: none;
     }
 
     .login:hover {
         box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.50);
+
     }
 
     .box {
@@ -104,15 +122,32 @@
     }
 
     .news {
+        display: inline-flex;
         border: 1px solid black;
         width: 1064px;
-        height: 740px;
+        height: 300px;
         margin-top: 25px;
-        display: inline-block;
+        overflow: hidden;
+
+    }
+
+    .container {
+        width: 1064px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s;
+    }
+
+    .news img {
+        flex: 1;
+        width: 1064px;
+        height: 300px;
     }
 </style>
 
 <body>
+    <h1 id="title">Malloc</h1>
     <div class="menu-box">
         <div>
             <a href="#" class="menu">음악차트</a>
@@ -135,17 +170,46 @@
     </div>
     <div class="box-line">
         <div class="login-box">
-            <div class="login">
-                <p>로그인</p>
-            </div>
+            <a href="./login.html" class="login">로그인</a>
         </div>
         <div class="box">
 
         </div>
     </div>
     <div class="news">
-
+        <div class="container">
+            <div class="inner">
+                <img src="https://t1.daumcdn.net/cfile/tistory/242D963758A178F101">
+            </div>
+            <div class="inner">
+                <img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_F43EAD3DBA3C54981940C49644EF69C4.jpg">
+            </div>
+            <div class="inner">
+                <img src="https://miricanvas.zendesk.com/hc/article_attachments/900003037726/_________.png">
+            </div>
+        </div>
     </div>
+    <div>
+        <button class="but1">1</button>
+        <button class="but2">2</button>
+        <button class="but3">3</button>
+    </div>
+
+
+
+
+
 </body>
+<script>
+    document.querySelector('.but1').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(0px)';
+    })
+    document.querySelector('.but2').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(-1064px)';
+    })
+    document.querySelector('.but3').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(-2128px)';
+    })
+</script>
 
 </html>
