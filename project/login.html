@@ -27,12 +27,15 @@
         
     }
     #title {
-        font-size: 56px;
         margin-top: 70px;
+        text-align: center;
+    }
+    #title a{
         color: #63D054;
+        font-size: 56px;
         font-family: 'Noto Serif', serif;
         font-weight: 700;
-        text-align: center;
+        text-decoration: none;
     }
     .login-wrapper {
         width: 400px;
@@ -44,7 +47,7 @@
 
     }
 
-    .login-wrapper>h2 {
+    .login-wrapper h2 {
         font-size: 24px;
         color: #63D054;
         margin-bottom: 20px;
@@ -66,16 +69,12 @@
         margin-top: 20px;
     }
 
-    .material-symbols-outlined{
-        text-decoration: none;
-        color: #63D054;
-        font-size: 40px;
-        margin-left: 160px;
-    }
 </style>
 
 <body>
-    <h1 id="title">Malloc</h1>
+    <div id ="title">
+        <a href="/main.html">05:09 P.M</a>
+    </div>
     <div class="login-wrapper">
         <h2>Login</h2>
         <form method="post" action="서버의url" id="login-form">
@@ -87,7 +86,6 @@
             <input type="submit" value="Login">
         </form>
     </div>
-    <a href ="main.html" class="material-symbols-outlined">arrow_back</a>
 </body>
 
 </html>

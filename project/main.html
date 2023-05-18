@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <style>
@@ -28,11 +30,75 @@
     }
 
     #title {
-        font-size: 56px;
         margin-top: 70px;
+    }
+
+    #title a {
         color: #63D054;
+        font-size: 56px;
         font-family: 'Noto Serif', serif;
         font-weight: 700;
+        text-decoration: none;
+    }
+
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: none;
+
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal_body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 1440px;
+        height: 100%;
+
+        padding: 40px;
+
+
+        background-color: rgba(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .modal a {
+        text-decoration: none;
+    }
+
+    table {
+        font-size: 16px;
+        width: 1280px;
+        border-collapse: collapse;
+
+    }
+
+    table th {
+        border: 2px solid #cac3c3a8;
+        border-left: none;
+        border-right: none;
+    }
+
+    table thead th {
+        padding: 20px;
+    }
+
+    table tbody th {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding: 28px;
+
     }
 
     .menu-box {
@@ -42,6 +108,9 @@
         margin-top: 50px;
         padding-top: 35px;
         border: 1px solid;
+        border-radius: 20px;
+
+
     }
 
     .menu {
@@ -67,6 +136,8 @@
         margin-top: 30px;
         vertical-align: top;
         padding: 20px;
+        border-radius: 20px;
+
     }
 
     .grid-container {
@@ -78,8 +149,27 @@
     .grid-item {
         width: 160px;
         height: 160px;
-        background-color: #ccc;
         padding: 20px;
+        border: 1px solid;
+        position: relative;
+    }
+
+    .grid-item p {
+        display: none;
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(158, 153, 153, 0.234);
+        padding-top: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-item:hover p {
+        display: block;
+
     }
 
     .box-line {
@@ -93,6 +183,8 @@
         border: 1px solid black;
         margin-top: 30px;
         text-align: justify;
+        border-radius: 20px;
+
     }
 
     .login {
@@ -119,6 +211,8 @@
         height: 204px;
         border: 1px solid black;
         margin-top: 25px;
+        border-radius: 20px;
+
     }
 
     .news {
@@ -126,8 +220,9 @@
         border: 1px solid black;
         width: 1064px;
         height: 300px;
-        margin-top: 25px;
         overflow: hidden;
+        border-radius: 20px;
+
 
     }
 
@@ -144,28 +239,70 @@
         width: 1064px;
         height: 300px;
     }
+
+    .button_st {
+        margin-left: 83%;
+        width: 100px;
+        border: 2px solid;
+        font-size: 32px;
+    }
 </style>
 
 <body>
-    <h1 id="title">Malloc</h1>
+    <div id="title">
+        <a href="/main.html">05:09 P.M</a>
+    </div>
     <div class="menu-box">
         <div>
-            <a href="#" class="menu">음악차트</a>
+            <a href="./music_charts.html" class="menu">음악차트</a>
             <a href="#" class="menu">최신음악</a>
             <a href="#" class="menu">장르음악</a>
-            <a href="#" class="menu">PlayList</a>
+            <a href="#" id="open" class="menu">PlayList</a>
         </div>
     </div>
+
     <div class="music-box">
+
         <div class="grid-container">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
+            <div class="grid-item">
+                1
+                <p>음악 상세 설명</p>
+            </div>
+            <div class="grid-item">
+                2
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                3
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                4
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                5
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                6
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                7
+                <p>음악 상세 설명</p>
+
+            </div>
+            <div class="grid-item">
+                8
+                <p>음악 상세 설명</p>
+
+            </div>
         </div>
     </div>
     <div class="box-line">
@@ -175,6 +312,11 @@
         <div class="box">
 
         </div>
+    </div>
+    <div class="button_st">
+        <button class="but1">1</button>
+        <button class="but2">2</button>
+        <button class="but3">3</button>
     </div>
     <div class="news">
         <div class="container">
@@ -189,18 +331,146 @@
             </div>
         </div>
     </div>
-    <div>
-        <button class="but1">1</button>
-        <button class="but2">2</button>
-        <button class="but3">3</button>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal_body">
+            <a href="#" class="material-symbols-outlined" id="close">arrow_back</a>
+            <p>모달 내용</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th>듣기</th>
+                        <th>담기</th>
+                        <th>다운</th>
+                        <th>뮤비</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                    <tr>
+                        <th>순위</th>
+                        <th class="box1">곡정보</th>
+                        <th class="box2">가수</th>
+                        <th>좋아여</th>
+                        <th><span class="material-symbols-outlined">play_arrow</span></th>
+                        <th><span class="material-symbols-outlined">add</span></th>
+                        <th><span class="material-symbols-outlined">download</span></th>
+                        <th><span class="material-symbols-outlined">videocam</span></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-
-
 
 
 </body>
 <script>
+
+    const open = document.getElementById('open');
+    const modal = document.getElementById('myModal');
+    const close = document.getElementById('close');
+
+    open.addEventListener('click', function () {
+        modal.style.display = "block";
+    })
+    close.addEventListener('click', function () {
+        modal.style.display = "none";
+    })
+
     document.querySelector('.but1').addEventListener('click', function () {
         document.querySelector('.container').style.transform = 'translate(0px)';
     })
@@ -210,6 +480,8 @@
     document.querySelector('.but3').addEventListener('click', function () {
         document.querySelector('.container').style.transform = 'translate(-2128px)';
     })
+
+
 </script>
 
 </html>
