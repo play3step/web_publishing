@@ -5,483 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2019156014</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Music site</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
-<style>
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: auto;
-        text-align: center;
-        width: 1440px;
-        height: 2000px;
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
-    #title {
-        margin-top: 70px;
-    }
-
-    #title a {
-        color: #63D054;
-        font-size: 56px;
-        font-family: 'Noto Serif', serif;
-        font-weight: 700;
-        text-decoration: none;
-    }
-
-    .modal {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-
-        display: none;
-
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .modal_body {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 1440px;
-        height: 100%;
-
-        padding: 40px;
-
-
-        background-color: rgba(255, 255, 255);
-        border-radius: 10px;
-        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
-
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .modal a {
-        text-decoration: none;
-    }
-
-    table {
-        font-size: 16px;
-        width: 1280px;
-        border-collapse: collapse;
-
-    }
-
-    table th {
-        border: 2px solid #cac3c3a8;
-        border-left: none;
-        border-right: none;
-    }
-
-    table thead th {
-        padding: 20px;
-    }
-
-    table tbody th {
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        padding: 28px;
-
-    }
-
-    .menu-box {
-        width: 1064px;
-        height: 100px;
-        display: inline-block;
-        margin-top: 50px;
-        padding-top: 35px;
-        border: 1px solid;
-        border-radius: 20px;
-
-
-    }
-
-    .menu {
-        width: 196px;
-        height: 70px;
-        font-size: 24px;
-        justify-content: center;
-        text-align: center;
-        margin-right: 60px;
-        text-decoration: none;
-        color: black;
-    }
-
-    .menu:hover {
-        color: #63D054;
-    }
-
-    .music-box {
-        width: 740px;
-        height: 370px;
-        border: 1px solid black;
-        display: inline-block;
-        margin-top: 30px;
-        vertical-align: top;
-        padding: 20px;
-        border-radius: 20px;
-
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-    }
-
-    .grid-item {
-        width: 160px;
-        height: 160px;
-        padding: 20px;
-        border: 1px solid;
-        position: relative;
-    }
-
-    .grid-item p {
-        display: none;
-        position: absolute;
-        width: 160px;
-        height: 160px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(158, 153, 153, 0.234);
-        padding-top: 50%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .grid-item:hover p {
-        display: block;
-
-    }
-
-    .box-line {
-        margin-left: 20px;
-        display: inline-block;
-    }
-
-    .login-box {
-        width: 304px;
-        height: 140px;
-        border: 1px solid black;
-        margin-top: 30px;
-        text-align: justify;
-        border-radius: 20px;
-
-    }
-
-    .login {
-        position: absolute;
-        text-align: center;
-        margin-top: 45px;
-        margin-left: 52px;
-        width: 200px;
-        height: 50px;
-        background-color: #63D054;
-        font-size: 16px;
-        color: white;
-        padding-top: 18px;
-        text-decoration: none;
-    }
-
-    .login:hover {
-        box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.50);
-
-    }
-
-    .box {
-        width: 304px;
-        height: 204px;
-        border: 1px solid black;
-        margin-top: 25px;
-        border-radius: 20px;
-
-    }
-
-    .news {
-        display: inline-flex;
-        border: 1px solid black;
-        width: 1064px;
-        height: 300px;
-        overflow: hidden;
-        border-radius: 20px;
-
-
-    }
-
-    .container {
-        width: 1064px;
-        height: 300px;
-        display: flex;
-        flex-direction: row;
-        transition: transform 0.5s;
-    }
-
-    .news img {
-        flex: 1;
-        width: 1064px;
-        height: 300px;
-    }
-
-    .button_st {
-        margin-left: 83%;
-        width: 100px;
-        border: 2px solid;
-        font-size: 32px;
-    }
-</style>
-
 <body>
-    <div id="title">
-        <a href="/main.html">05:09 P.M</a>
-    </div>
-    <div class="menu-box">
-        <div>
-            <a href="./music_charts.html" class="menu">음악차트</a>
-            <a href="#" class="menu">최신음악</a>
-            <a href="#" class="menu">장르음악</a>
-            <a href="#" id="open" class="menu">PlayList</a>
+    <div class="menu_box">
+        <div class="menu_list">
+            <a href="#" class="menu_list">509</a>
+        </div>
+        <div class="menu_list">
+            <a href="#" class="menu_list">음악차트</a>
+        </div>
+        <div class="menu_list">
+            <a href="#" class="menu_list">최신음악</a>
+        </div>
+        <div class="menu_list">
+            <a href="#" class="menu_list">장르음악</a>
+        </div>
+        <div class="menu_list">
+            <a href="#" class="menu_list">PlayList</a>
+        </div>
+        <div class="menu_list">
+            <a href="#" class="menu_list">Login</a>
         </div>
     </div>
+    <h1 id="title">Music Is My Life</h1>
+    <p id="exp">이러쿵 저러쿵 쿵쿵쿵</p>
+    <div class="main_music">
+        <div class="music_list">
+            <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/PfzvY1663662584.jpg">
+            <p>음악 상세 설명</p>
 
-    <div class="music-box">
-
-        <div class="grid-container">
-            <div class="grid-item">
-                1
-                <p>음악 상세 설명</p>
-            </div>
-            <div class="grid-item">
-                2
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                3
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                4
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                5
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                6
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                7
-                <p>음악 상세 설명</p>
-
-            </div>
-            <div class="grid-item">
-                8
-                <p>음악 상세 설명</p>
-
-            </div>
         </div>
-    </div>
-    <div class="box-line">
-        <div class="login-box">
-            <a href="./login.html" class="login">로그인</a>
+        <div class="music_list">
+            <img src="https://post-phinf.pstatic.net/MjAyMDA5MDRfMjcx/MDAxNTk5MjE4MDE5Mzcw.jLTW8nXn80IriL-CBHj88OG6mAcsrc4lLclqk25tAmUg.15AvCfPQCS31Ina-TeCFdha94JXUYgtANVS0Xa3vq9Ig.JPEG/f26f6953cc1ff7579f4582f476f2de46359cfb21c88707f25a0aa02a9c77b540_v1.jpg?type=w1200">
+            <p>음악 상세 설명</p>
+
         </div>
-        <div class="box">
+        <div class="music_list">
+            <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/wF6nx1662212363.jpg">
+            <p>음악 상세 설명</p>
+
+        </div>
+        <div class="music_list">
+            <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/hN2E71671959118.jpg">
+            <p>음악 상세 설명</p>
+
+        </div>
+        <div class="music_list">
+            <img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA5MDhfMTkw/MDAxNTY3OTQxNDIwODQw.NTlSTi3dUcCLw_MEpQe0GkIYN6M5c1XqPmxtCTwGTTgg.hcoEuUeOYqVmdmGe7MIfSQZuNZfqNaEofyEtZv0bS2Qg.JPEG.skdbs938/%EC%95%A8%EB%B2%94%EB%AA%A9%EC%97%852.jpg?type=w800">
+            <p>음악 상세 설명</p>
 
         </div>
     </div>
-    <div class="button_st">
-        <button class="but1">1</button>
-        <button class="but2">2</button>
-        <button class="but3">3</button>
-    </div>
-    <div class="news">
-        <div class="container">
-            <div class="inner">
-                <img src="https://t1.daumcdn.net/cfile/tistory/242D963758A178F101">
-            </div>
-            <div class="inner">
-                <img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_F43EAD3DBA3C54981940C49644EF69C4.jpg">
-            </div>
-            <div class="inner">
-                <img src="https://miricanvas.zendesk.com/hc/article_attachments/900003037726/_________.png">
-            </div>
+    <div class="genre_box">
+        <div class="genre1">
+            <img src="https://w7.pngwing.com/pngs/302/593/png-transparent-ice-desktop-high-definition-video-1080p-ice-blue-computer-wallpaper-desktop-wallpaper.png">
+        </div>
+        <div class="genre2">
+            <img src="https://i.pinimg.com/originals/8a/c7/49/8ac749d3599a1cf70fb6f295c8af9608.jpg">
+        </div>
+        <div class="genre3">
+            <img src="https://miricanvas.zendesk.com/hc/article_attachments/900006682446/_______6_.png">
+        </div>
+        <div class="genre3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJbJe9AWETvYyHFnyg8U44iVTG0mlGk6M4g&usqp=CAU">
+        </div>
+        <div class="genre4">
+            <img src="https://t1.daumcdn.net/cfile/tistory/99C6F9345B4DFA5C2E">
         </div>
     </div>
 
-
-    <div class="modal" id="myModal">
-        <div class="modal_body">
-            <a href="#" class="material-symbols-outlined" id="close">arrow_back</a>
-            <p>모달 내용</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th>듣기</th>
-                        <th>담기</th>
-                        <th>다운</th>
-                        <th>뮤비</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                    <tr>
-                        <th>순위</th>
-                        <th class="box1">곡정보</th>
-                        <th class="box2">가수</th>
-                        <th>좋아여</th>
-                        <th><span class="material-symbols-outlined">play_arrow</span></th>
-                        <th><span class="material-symbols-outlined">add</span></th>
-                        <th><span class="material-symbols-outlined">download</span></th>
-                        <th><span class="material-symbols-outlined">videocam</span></th>
-                    </tr>
-                </tbody>
-            </table>
+    <div>
+        <h4 class="sub_title">오늘의 음악</h4>
+        <div class="music_chart">
+            <div class="chart">1</div>
+            <div class="chart">2</div>
+            <div class="chart">3</div>
+            <div class="chart">4</div>
+            <div class="chart">5</div>
+            <div class="chart">6</div>
+            <div class="chart">7</div>
+            <div class="chart">8</div>
+            <div class="chart">9</div>
+            <div class="chart">10</div>
         </div>
     </div>
-
-
 </body>
-<script>
-
-    const open = document.getElementById('open');
-    const modal = document.getElementById('myModal');
-    const close = document.getElementById('close');
-
-    open.addEventListener('click', function () {
-        modal.style.display = "block";
-    })
-    close.addEventListener('click', function () {
-        modal.style.display = "none";
-    })
-
-    document.querySelector('.but1').addEventListener('click', function () {
-        document.querySelector('.container').style.transform = 'translate(0px)';
-    })
-    document.querySelector('.but2').addEventListener('click', function () {
-        document.querySelector('.container').style.transform = 'translate(-1064px)';
-    })
-    document.querySelector('.but3').addEventListener('click', function () {
-        document.querySelector('.container').style.transform = 'translate(-2128px)';
-    })
-
-
-</script>
 
 </html>
